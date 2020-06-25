@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>Binary Search Summary | Haiming</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Leetcode,Binary Searach" />
+    
+    <meta name="description" content="How Binary Search workBinary Search operates on a contiguous sequence with a specified left and right index. This is called the Search Space.Binary Search maintains the left, right, and middle in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Binary Search Summary">
+<meta property="og:url" content="http://haiming2048.github.io/en/Binary_search_summary/index.html">
+<meta property="og:site_name" content="Haiming">
+<meta property="og:description" content="How Binary Search workBinary Search operates on a contiguous sequence with a specified left and right index. This is called the Search Space.Binary Search maintains the left, right, and middle in">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://haiming2048.github.io/image/Binary_search.png">
+<meta property="article:published_time" content="2020-06-25T15:34:55.000Z">
+<meta property="article:modified_time" content="2020-06-25T18:21:13.553Z">
+<meta property="article:author" content="Haiming">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="Binary Searach">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://haiming2048.github.io/image/Binary_search.png">
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Hacker inside</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Data-Science/">Data Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Data-Science/Pandas/">Pandas</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Data-Science/Plot/">Plot</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ML/">ML</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Binary_search_summary" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Binary Search Summary
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/en/Binary_search_summary/" class="article-date">
+         <time datetime="2020-06-25T15:34:55.000Z" itemprop="datePublished">2020-06-25</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Binary-Searach/" rel="tag">Binary Searach</a>, <a class="tag-link" href="/tags/Leetcode/" rel="tag">Leetcode</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <hr>
+<br>
+<img src="/image/Binary_search.png" alt="Hexo" class="caption" />
+<font face="Verdana" size = 4>
+
+<h1 id="How-Binary-Search-work"><a href="#How-Binary-Search-work" class="headerlink" title="How Binary Search work"></a>How Binary Search work</h1><p>Binary Search operates on a contiguous sequence with a specified left and right index. This is called the Search Space.<br>Binary Search maintains the left, right, and middle indicies of the search space and compares the search target or applies the search condition to the middle value of the collection; if the condition is unsatisfied or values unequal, the half in which the target cannot lie is eliminated and the search continues on the remaining half until it is successful. If the search ends with an empty half, the condition cannot be fulfilled and target is not found.</p>
+<p><strong>Note</strong><br>Binary Search can take many alternate forms and might not always be as straight forward as searching for a specific value. Sometimes you will have to apply a specific condition or rule to determine which side (left or right) to search next.</p>
+<p><strong>Templates</strong><br>Basically, there are three templates we will often use in Binary Search, I will introduce them latter.</p>
+<h1 id="How-do-we-identify-Binary-Search"><a href="#How-do-we-identify-Binary-Search" class="headerlink" title="How do we identify Binary Search?"></a>How do we identify Binary Search?</h1><p>As mentioned in earlier, Binary Search is an algorithm that divides the search space in 2 after every comparison. Binary Search should be considered every time you need to search for an index or element in a collection. If the collection is unordered, we can always sort it first before applying Binary Search.</p>
+<h2 id="3-Parts-of-a-Successful-Binary-Search"><a href="#3-Parts-of-a-Successful-Binary-Search" class="headerlink" title="3 Parts of a Successful Binary Search"></a>3 Parts of a Successful Binary Search</h2><p>Binary Search is generally composed of 3 main sections:<br><strong>1</strong>. Pre-processing - Sort if collection is unsorted.<br><strong>2</strong>. Binary Search - Using a loop or recursion to divide search space in half after each comparison.<br><strong>3</strong>. Post-processing - Determine viable candidates in the remaining space.</p>
+<hr>
+<h3 id="Binary-Search-Template-I"><a href="#Binary-Search-Template-I" class="headerlink" title="Binary Search Template I"></a>Binary Search Template I</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binarySearch</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :type nums: List[int]</span></span><br><span class="line"><span class="string">    :type target: int</span></span><br><span class="line"><span class="string">    :rtype: int</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">if</span> len(nums) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    left, right = <span class="number">0</span>, len(nums) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> nums[mid] &lt; target:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># End Condition: left &gt; right</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<p><strong>Template #1</strong> is the most basic and elementary form of Binary Search. It is the standard Binary Search Template that most high schools or universities use when they first teach students computer science.<br><strong>Template #1</strong> is used to search for an element or condition which can be determined by accessing a single index in the array.</p>
+<p><strong>Key Attributes:</strong></p>
+<ul>
+<li>An advanced way to implement Binary Search.</li>
+<li>Search Condition needs to access element’s immediate right neighbor</li>
+<li>Use element’s right neighbor to determine if condition is met and decide whether to go left or right</li>
+<li>Gurantees Search Space is at least 2 in size at each step</li>
+<li>Post-processing required. Loop/Recursion ends when you have 1 element left. Need to assess if the remaining element meets the condition.</li>
+</ul>
+<p><strong>Distinguishing Syntax:</strong></p>
+<ul>
+<li>Initial Condition: <code>left = 0, right = length</code></li>
+<li>Termination: <code>left == right</code></li>
+<li>Searching Left: <code>right = mid</code></li>
+<li>Searching Right: <code>left = mid+1</code></li>
+</ul>
+<p><strong>Template #1 Example</strong></p>
+<ul>
+<li>Leetcode: #69. Sqrt(x)<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Leetcode: #69. Sqrt(x)</span></span><br><span class="line"><span class="string">Implement int sqrt(int x).</span></span><br><span class="line"><span class="string">Compute and return the square root of x, where x is guaranteed to be a </span></span><br><span class="line"><span class="string">non-negative integer.</span></span><br><span class="line"><span class="string">Since the return type is an integer, the decimal digits are truncated and </span></span><br><span class="line"><span class="string">only the integer part of the result is returned.</span></span><br><span class="line"><span class="string">Example 1:</span></span><br><span class="line"><span class="string">Input: 4</span></span><br><span class="line"><span class="string">Output: 2</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Example 2:</span></span><br><span class="line"><span class="string">Input: 8</span></span><br><span class="line"><span class="string">Output: 2</span></span><br><span class="line"><span class="string">Explanation: The square root of 8 is 2.82842..., and since </span></span><br><span class="line"><span class="string">             the decimal part is truncated, 2 is returned.</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Binary Search solotion</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span><span class="params">(self, x: int)</span> -&gt; int:</span></span><br><span class="line">        left = <span class="number">0</span> </span><br><span class="line">        right = x</span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            mid = left + (right - left) // <span class="number">2</span> </span><br><span class="line">            <span class="keyword">if</span> mid * mid == x:</span><br><span class="line">                <span class="keyword">return</span> mid </span><br><span class="line">            <span class="keyword">elif</span> mid * mid &gt; x:</span><br><span class="line">                right = mid - <span class="number">1</span> </span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left = mid + <span class="number">1</span> </span><br><span class="line">        <span class="keyword">return</span> right</span><br></pre></td></tr></table></figure></li>
+<li>Other simily questions using this template: <code>Leetcode(#33, #374)</code></li>
+</ul>
+<hr>
+<h3 id="Binary-Search-Template-II"><a href="#Binary-Search-Template-II" class="headerlink" title="Binary Search Template II"></a>Binary Search Template II</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binarySearch</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :type nums: List[int]</span></span><br><span class="line"><span class="string">    :type target: int</span></span><br><span class="line"><span class="string">    :rtype: int</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">if</span> len(nums) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    left, right = <span class="number">0</span>, len(nums)</span><br><span class="line">    <span class="keyword">while</span> left &lt; right:</span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> nums[mid] &lt; target:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right = mid</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Post-processing:</span></span><br><span class="line">    <span class="comment"># End Condition: left == right</span></span><br><span class="line">    <span class="keyword">if</span> left != len(nums) <span class="keyword">and</span> nums[left] == target:</span><br><span class="line">        <span class="keyword">return</span> left</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<p><strong>Template #2</strong> is an advanced form of Binary Search. It is used to search for an element or condition which requires accessing the current index and its immediate right neighbor’s index in the array.</p>
+<p><strong>Key Attributes:</strong></p>
+<ul>
+<li>Most basic and elementary form of Binary Search</li>
+<li>Search Condition can be determined without comparing to the element’s neighbors (or use specific elements around it)</li>
+<li>No post-processing required because at each step, you are checking to see if the element has been found. If you reach the end, then you know the element is not found</li>
+</ul>
+<p><strong>Distinguishing Syntax:</strong></p>
+<ul>
+<li>Initial Condition: <code>left = 0, right = length-1</code></li>
+<li>Termination: <code>left &gt; right</code></li>
+<li>Searching Left: <code>right = mid-1</code></li>
+<li>Searching Right: <code>left = mid+1</code></li>
+</ul>
+<p><strong>Template #2 Example</strong></p>
+<ul>
+<li>Leetcode: #278. First Bad Version<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Leetcode: #278. First Bad Version</span></span><br><span class="line"><span class="string">You are a product manager and currently leading a team to develop a new </span></span><br><span class="line"><span class="string">product. Unfortunately, the latest version of your product fails </span></span><br><span class="line"><span class="string">the quality check. Since each version is developed based on the previous </span></span><br><span class="line"><span class="string">version, all the versions after a bad version are also bad.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Suppose you have n versions [1, 2, ..., n] and you want to find out the first </span></span><br><span class="line"><span class="string">bad one, which causes all the following ones to be bad.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">You are given an API bool isBadVersion(version) which will return whether</span></span><br><span class="line"><span class="string"> version is bad. Implement a function to find the first bad version. </span></span><br><span class="line"><span class="string"> You should minimize the number of calls to the API.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Example:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Given n = 5, and version = 4 is the first bad version.</span></span><br><span class="line"><span class="string">call isBadVersion(3) -&gt; false</span></span><br><span class="line"><span class="string">call isBadVersion(5) -&gt; true</span></span><br><span class="line"><span class="string">call isBadVersion(4) -&gt; true</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Then 4 is the first bad version. </span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Binary Search solotion</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">firstBadVersion</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        left = <span class="number">1</span> </span><br><span class="line">        right = n</span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            mid = (left + right ) //<span class="number">2</span>  </span><br><span class="line">            <span class="keyword">if</span> isBadVersion(mid):</span><br><span class="line">                right =  mid </span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure></li>
+<li>Other simily questions using this template: <code>Leetcode(#153, #162)</code></li>
+</ul>
+<hr>
+<h3 id="Binary-Search-Template-III"><a href="#Binary-Search-Template-III" class="headerlink" title="Binary Search Template III"></a>Binary Search Template III</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binarySearch</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :type nums: List[int]</span></span><br><span class="line"><span class="string">    :type target: int</span></span><br><span class="line"><span class="string">    :rtype: int</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">if</span> len(nums) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    left, right = <span class="number">0</span>, len(nums)</span><br><span class="line">    <span class="keyword">while</span> left &lt; right:</span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> nums[mid] &lt; target:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right = mid</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Post-processing:</span></span><br><span class="line">    <span class="comment"># End Condition: left == right</span></span><br><span class="line">    <span class="keyword">if</span> left != len(nums) <span class="keyword">and</span> nums[left] == target:</span><br><span class="line">        <span class="keyword">return</span> left</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<p><strong>Template #3</strong> is another unique form of Binary Search. It is used to search for an element or condition which requires accessing the current index and its immediate left and right neighbor’s index in the array.</p>
+<p><strong>Key Attributes:</strong></p>
+<ul>
+<li>An alternative way to implement Binary Search</li>
+<li>Search Condition needs to access element’s immediate left and right neighbors</li>
+<li>Use element’s neighbors to determine if condition is met and decide whether to go left or right</li>
+<li>Gurantees Search Space is at least 3 in size at each step</li>
+<li>Post-processing required. Loop/Recursion ends when you have 2 elements left. Need to assess if the remaining elements meet the condition.</li>
+</ul>
+<p><strong>Distinguishing Syntax:</strong></p>
+<ul>
+<li>Initial Condition: <code>left = 0, right = length-1</code></li>
+<li>Termination: <code>left + 1 == right</code></li>
+<li>Searching Left: <code>right = mid</code></li>
+<li>Searching Right: <code>left = mid</code></li>
+</ul>
+<p><strong>Template #3 Example</strong></p>
+<ul>
+<li>Leetcode: #34. Find First and Last Position of Element in Sorted Array</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Leetcode: #34. Find First and Last Position of Element in Sorted Array</span></span><br><span class="line"><span class="string">Given an array of integers nums sorted in ascending order, find the starting </span></span><br><span class="line"><span class="string">and ending position of a given target value.</span></span><br><span class="line"><span class="string">Your algorithm's runtime complexity must be in the order of O(log n).</span></span><br><span class="line"><span class="string">If the target is not found in the array, return [-1, -1].</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Example 1:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Input: nums = [5,7,7,8,8,10], target = 8</span></span><br><span class="line"><span class="string">Output: [3,4]</span></span><br><span class="line"><span class="string">Example 2:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Input: nums = [5,7,7,8,8,10], target = 6</span></span><br><span class="line"><span class="string">Output: [-1,-1]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Binary Search solotion</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchRange</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> nums:</span><br><span class="line">            <span class="keyword">return</span> [<span class="number">-1</span>,<span class="number">-1</span>]</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">lower</span><span class="params">(data, target)</span>:</span></span><br><span class="line">            l,r = <span class="number">0</span>,len(data)</span><br><span class="line">            <span class="keyword">while</span> l &lt; r:</span><br><span class="line">                mid = (l+r)//<span class="number">2</span></span><br><span class="line">                <span class="keyword">if</span> target &gt; data[mid]:</span><br><span class="line">                    l = mid + <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    r = mid</span><br><span class="line">            <span class="keyword">return</span> l</span><br><span class="line">        left = lower(nums, target)</span><br><span class="line">        right = lower(nums, target+<span class="number">1</span>)<span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> [left, right] <span class="keyword">if</span> left &lt; len(nums) <span class="keyword">and</span> nums[left]==target <span class="keyword">else</span> [<span class="number">-1</span>,<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Other simily questions using this template: <code>Leetcode(#162, #658)</code></li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference:"></a>reference:</h3><p>Leetcode: <a href="https://leetcode.com/explore/learn/card/binary-search" target="_blank" rel="noopener">https://leetcode.com/explore/learn/card/binary-search</a><br></font></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://haiming2048.github.io/en/Binary_search_summary/" data-id="ckbuycfh3000dblceh6vx8k5t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Haiming"
+        },
+        "headline": "Binary Search Summary",
+        "image": "http://haiming2048.github.io/image/Binary_search.png",
+        "keywords": "Leetcode Binary Searach",
+        "genre": "Algorithm",
+        "datePublished": "2020-06-25",
+        "dateCreated": "2020-06-25",
+        "dateModified": "2020-06-25",
+        "url": "http://haiming2048.github.io/en/Binary_search_summary/",
+        "description": "
+
+
+
+
+How Binary Search workBinary Search operates on a contiguous sequence with a specified left and right index. This is called the Search Space.Binary Search maintains the left, right, and middle in",
+        "wordCount": 2672
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/hming2048" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="stack-overflow" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-stack-overflow"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://github.com/hming2048" target="_blank" rel="noopener">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/en/statistics_Notation/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Statistics Notation</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/en/Binary_search_summary/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/image/Binary_search.png)" alt="Binary Search Summary" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/en/Binary_search_summary/" class="title">Binary Search Summary</a></p>
+                            <p class="item-date"><time datetime="2020-06-25T15:34:55.000Z" itemprop="datePublished">2020-06-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/en/statistics_Notation/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/image/statistic.png)" alt="Statistics Notation" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/en/statistics_Notation/" class="title">Statistics Notation</a></p>
+                            <p class="item-date"><time datetime="2020-06-01T00:34:25.000Z" itemprop="datePublished">2020-05-31</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/en/hexo-commands/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/image/hexo.png)" alt="The common used commands in Hexo" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/en/hexo-commands/" class="title">The common used commands in Hexo</a></p>
+                            <p class="item-date"><time datetime="2020-05-30T06:31:32.000Z" itemprop="datePublished">2020-05-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/en/data_science/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/image/test.jpg)" alt="Data Science" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Data-Science/">Data Science</a></p>
+                            <p class="item-title"><a href="/en/data_science/" class="title">Data Science</a></p>
+                            <p class="item-date"><time datetime="2020-04-10T19:56:22.000Z" itemprop="datePublished">2020-04-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/en/python_ML/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/image/test.jpg)" alt="Machine Learning" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/ML/">ML</a></p>
+                            <p class="item-title"><a href="/en/python_ML/" class="title">Machine Learning</a></p>
+                            <p class="item-date"><time datetime="2020-04-10T19:56:22.000Z" itemprop="datePublished">2020-04-10</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Science/">Data Science</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Science/Pandas/">Pandas</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Science/Plot/">Plot</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ML/">ML</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Binary-Searach/" rel="tag">Binary Searach</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Science/" rel="tag">Data Science</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/" rel="tag">Leetcode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pandas/" rel="tag">Pandas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Plot/" rel="tag">Plot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Statistics/" rel="tag">Statistics</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Binary-Searach/" style="font-size: 10px;">Binary Searach</a> <a href="/tags/Data-Science/" style="font-size: 20px;">Data Science</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Leetcode/" style="font-size: 10px;">Leetcode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Plot/" style="font-size: 10px;">Plot</a> <a href="/tags/Statistics/" style="font-size: 10px;">Statistics</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 Haiming</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://haiming2048.github.io/en/Binary_search_summary/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>

@@ -6,20 +6,27 @@
     
 
     
-    <title>Category: Algorithm | Haiming</title>
+    <title>Interesting probability problems with coins | Haiming</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="description....">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Haiming">
-<meta property="og:url" content="http://haiming2048.github.io/categories/Algorithm/index.html">
+    <meta name="keywords" content="Statistics,Probability" />
+    
+    <meta name="description" content="Problems1. What is the expected number of coin flips for getting a head?Solution:Let the expected number of coin flips be x. Then we can write an equation for it   a. If the first flip is the hea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Interesting probability problems with coins">
+<meta property="og:url" content="http://haiming2048.github.io/en/probability/index.html">
 <meta property="og:site_name" content="Haiming">
-<meta property="og:description" content="description....">
+<meta property="og:description" content="Problems1. What is the expected number of coin flips for getting a head?Solution:Let the expected number of coin flips be x. Then we can write an equation for it   a. If the first flip is the hea">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://haiming2048.github.io/image/stat/coin.png">
+<meta property="article:published_time" content="2020-07-03T01:48:21.000Z">
+<meta property="article:modified_time" content="2020-07-03T02:46:46.361Z">
 <meta property="article:author" content="Haiming">
-<meta property="article:tag" content="blog">
+<meta property="article:tag" content="Statistics">
+<meta property="article:tag" content="Probability">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://haiming2048.github.io/image/stat/coin.png">
     
 
     
@@ -147,79 +154,212 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">Algorithm</em>
+    <a class="page-title-link" href="/categories/Statistics/">Statistics</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-probability" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2020" class="archive-year"><i class="icon fa fa-calendar-o"></i>2020</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/en/Binary_search_summary/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/image/Binary_search.png)" alt="Binary Search Summary" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://haiming2048.github.io/en/Binary_search_summary/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Algorithm/">Algorithm</a>
-            </div>
-            <div class="date"><time datetime="2020-06-25T15:34:55.000Z" itemprop="datePublished">2020-06-25</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/en/Binary_search_summary/">Binary Search Summary</a>
+        Interesting probability problems with coins
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/en/probability/" class="article-date">
+         <time datetime="2020-07-03T01:48:21.000Z" itemprop="datePublished">2020-07-02</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Probability/" rel="tag">Probability</a>, <a class="tag-link" href="/tags/Statistics/" rel="tag">Statistics</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <hr>
+<br>
+<img src="/image/stat/coin.png" alt="Probability problems with coins Word Cloud" class="caption" />
+<font face="Verdana" size = 4>
+
+<h1 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h1><h3 id="1-What-is-the-expected-number-of-coin-flips-for-getting-a-head"><a href="#1-What-is-the-expected-number-of-coin-flips-for-getting-a-head" class="headerlink" title="1. What is the expected number of coin flips for getting a head?"></a>1. What is the expected number of coin flips for getting a head?</h3><p><strong>Solution:</strong><br>Let the expected number of coin flips be x. Then we can write an equation for it </p>
+<ul>
+<li>a. If the first flip is the head, then we are done. The probability of this event is 1/2 and the number of coin flips for this event is 1.</li>
+<li>b. If the first flip is the tails, then we have wasted one flip. Since consecutive flips are independent events, the solution in this case can be recursively framed in terms of x - The probability of this event is 1/2 and the expected number of coins flips now onwards is x. But we have already wasted one flip, so the total number of flips is x+1.</li>
+</ul>
+<p>The expected value x is the sum of the expected values of these two cases. Using the rule of linerairty of the expectation and the definition of Expected value(E[x] = x<sub>1</sub>p<sub>1</sub> + x<sub>2</sub>p<sub>2</sub> + … + x<sub>n</sub>p<sub>n</sub>), we get</p>
+<p><code>x = (1/2)(1) + (1/2) (1+x)</code><br><code>Solving, we get x = 2.</code></p>
+<p>Thus the expected number of coin flips for getting a head is 2.</p>
+<h3 id="2-What-is-the-expected-number-of-coin-flips-for-getting-two-consecutive-heads"><a href="#2-What-is-the-expected-number-of-coin-flips-for-getting-two-consecutive-heads" class="headerlink" title="2. What is the expected number of coin flips for getting two consecutive heads?"></a>2. What is the expected number of coin flips for getting two consecutive heads?</h3><p><strong>Solution:</strong><br>This question is a litter complecated than question #1 but we can still use the pattern of question #1 to solve this problem. Let the expected number of coin flips be x. The case analysis goes as follows:</p>
+<ul>
+<li>a. If the first flip is a tails, then we have wasted one flip. The probability of this event is 1/2 and the total number of flips required is x+1</li>
+<li>b. If the first flip is a heads and second flip is a tails, then we have wasted two flips. The probability of this event is 1/4 and the total number of flips required is x+2</li>
+<li>c. If the first flip is a heads and second flip is also heads, then we are done. The probability of this event is 1/4 and the total number of flips required is 2.</li>
+</ul>
+<p>Adding, the equation that we get is -</p>
+<p><code>x = (1/2)(x+1) + (1/4)(x+2) + (1/4)2</code><br><code>Solving, we get x = 6.</code></p>
+<p>Thus, the expected number of coin flips for getting two consecutive heads is 6.</p>
+<h3 id="3-Generalization-What-is-the-expected-number-of-coin-flips-for-getting-N-consecutive-heads-given-N"><a href="#3-Generalization-What-is-the-expected-number-of-coin-flips-for-getting-N-consecutive-heads-given-N" class="headerlink" title="3. (Generalization) What is the expected number of coin flips for getting N consecutive heads, given N?"></a>3. (Generalization) What is the expected number of coin flips for getting N consecutive heads, given N?</h3><p><strong>Solution:</strong><br>Let the exepected number of coin flips be x. Based on previous exercises, we can wind up the whole case analysis in two basic parts</p>
+<ul>
+<li>a. If we get 1st, 2nd, 3rd,…,n’th tail as the first tail in the experiment, then we have to start all over again.</li>
+<li>b. Else we are done.</li>
+</ul>
+<p>For the 1st flip as tail, the part of the equation is (1/2)(x+1)<br>For the 2nd flip as tail, the part of the equation is (1/4)(x+2)<br>…<br>For the k’th flip as tail, the part of the equation is (1/(2<sup>k</sup>))(x+k)<br>…<br>For the N’th flip as tail, the part of the equation is (1/(2<sup>N</sup>))(x+N)<br>The part of equation corrresponding to case (b) is (1/(2<sup>N</sup>))(N)</p>
+<p>Adding,</p>
+<p>x = (1/2)(x+1) + (1/4)(x+2) + … + (1/(2<sup>k</sup>))(x+k) + … + (1/(2<sup>N</sup>))(x+N) +  (1/(2<sup>N</sup>))(N)</p>
+<p>Solving this equation that we get is -</p>
+<p>x = (2<sup>N+1</sup>) - 2 </p>
+<p>Thus, the expected number of coin flips for getting N consecutive heads is (2<sup>N+1</sup>) - 2 .</p>
+<h3 id="4-Given-a-biased-coin-that-comes-up-heads-with-some-probability-greater-than-one-half-and-less-than-one-0-5-lt-p-lt-1-can-we-use-it-to-simulate-an-unbiased-coin-toss"><a href="#4-Given-a-biased-coin-that-comes-up-heads-with-some-probability-greater-than-one-half-and-less-than-one-0-5-lt-p-lt-1-can-we-use-it-to-simulate-an-unbiased-coin-toss" class="headerlink" title="4. Given a biased coin that comes up heads with some probability greater than one-half and less than one(0.5 &lt; p &lt; 1 ), can we use it to simulate an unbiased coin toss"></a>4. Given a biased coin that comes up heads with some probability greater than one-half and less than one(0.5 &lt; p &lt; 1 ), can we use it to simulate an unbiased coin toss</h3><p><strong>Solution:</strong><br>A simple solution, attributed to <code>von Neumann</code>, makes use of symmetry. </p>
+<p>Let us flip the coin twice. </p>
+<ul>
+<li>If it comes up heads first and tails second, then we call it a 0. </li>
+<li>If it comes up tails first and heads second, then we call it a 1. </li>
+<li>If the two flips are the same, we flip twice again, and repeat the process until we have a unbiased toss. </li>
+<li>If we define a round to be a pair of flips, it is clear that we the probability of generating a 0 or a 1 is the same each round, so we correctly simulate an unbiased coin. </li>
+</ul>
+<p>For convenience, we will call the 0 or 1 produced by our simulated unbiased coin a bit, which is the appropriate term for a computer scientist.<br>Interestingly enough, this solution works regardless of the probability that the coin lands heads up, even if this probability is unknown! This property seems highly advantageous, as we may not know the bias of a coin ahead of time.</p>
+<p><strong>Reference:</strong><br><a href="https://www.codechef.com/wiki/tutorial-expectation" target="_blank" rel="noopener">https://www.codechef.com/wiki/tutorial-expectation</a><br><a href="http://www.eecs.harvard.edu/~michaelm/coinflipext.pdf" target="_blank" rel="noopener">http://www.eecs.harvard.edu/~michaelm/coinflipext.pdf</a></p>
+</font>
+
+
+
+        </div>
+        <footer class="article-footer">
             
 
 
 
+    <a data-url="http://haiming2048.github.io/en/probability/" data-id="ckc5maoxt0004dmceh1ywepet" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
 
-How Binary Search workBinary Search operates on a contiguous sequence with a specified left and right index. This is called the Search Space.Binary Search maintains the left, right, and middle in
-        </p>
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Haiming"
+        },
+        "headline": "Interesting probability problems with coins",
+        "image": "http://haiming2048.github.io/image/stat/coin.png",
+        "keywords": "Statistics Probability",
+        "genre": "Statistics",
+        "datePublished": "2020-07-02",
+        "dateCreated": "2020-07-02",
+        "dateModified": "2020-07-02",
+        "url": "http://haiming2048.github.io/en/probability/",
+        "description": "
+
+
+
+
+Problems1. What is the expected number of coin flips for getting a head?Solution:Let the expected number of coin flips be x. Then we can write an equation for it 
+
+a. If the first flip is the hea",
+        "wordCount": 843
+    }
+</script>
+
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
     
-
-
-    </div></section>
-
+    </section>
 
 
 
@@ -281,6 +421,19 @@ How Binary Search workBinary Search operates on a contiguous sequence with a spe
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/en/p-value/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">What is P-Value?</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -492,11 +645,13 @@ How Binary Search workBinary Search operates on a contiguous sequence with a spe
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://haiming2048.github.io/en/probability/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

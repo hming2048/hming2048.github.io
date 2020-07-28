@@ -6,20 +6,27 @@
     
 
     
-    <title>Tag: ML | Haiming</title>
+    <title>A/B Testing | Haiming</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="description....">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Haiming">
-<meta property="og:url" content="http://haiming2048.github.io/tags/ML/index.html">
+    <meta name="keywords" content="Statistics,AB testing" />
+    
+    <meta name="description" content="This blog is about some key principles and insights that any tester or testing team should have in mind as they make their first forays into testing. The hardest part of A&#x2F;B testing is determinin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A&#x2F;B Testing">
+<meta property="og:url" content="http://haiming2048.github.io/en/AB-Testing/index.html">
 <meta property="og:site_name" content="Haiming">
-<meta property="og:description" content="description....">
+<meta property="og:description" content="This blog is about some key principles and insights that any tester or testing team should have in mind as they make their first forays into testing. The hardest part of A&#x2F;B testing is determinin">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://haiming2048.github.io/image/stat/ab.jpg">
+<meta property="article:published_time" content="2020-07-28T15:16:58.000Z">
+<meta property="article:modified_time" content="2020-07-28T16:00:09.901Z">
 <meta property="article:author" content="Haiming">
-<meta property="article:tag" content="blog">
+<meta property="article:tag" content="Statistics">
+<meta property="article:tag" content="AB testing">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://haiming2048.github.io/image/stat/ab.jpg">
     
 
     
@@ -143,77 +150,201 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>ML</em>
+    <a class="page-title-link" href="/categories/Statistics/">Statistics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Statistics/AB-testing/">AB testing</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-AB-Testing" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2020" class="archive-year"><i class="icon fa fa-calendar-o"></i>2020</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/en/python_ML/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/image/test.jpg)" alt="Machine Learning" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://haiming2048.github.io/en/python_ML/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ML/">ML</a>
-            </div>
-            <div class="date"><time datetime="2020-04-10T19:56:22.000Z" itemprop="datePublished">2020-04-10</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/en/python_ML/">Machine Learning</a>
+        A/B Testing
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/en/AB-Testing/" class="article-date">
+         <time datetime="2020-07-28T15:16:58.000Z" itemprop="datePublished">2020-07-28</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/AB-testing/" rel="tag">AB testing</a>, <a class="tag-link" href="/tags/Statistics/" rel="tag">Statistics</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <hr>
+<br>
+<img src="/image/stat/ab.jpg" alt="A/B Testing Word Cloud" class="caption" />
+<font face="Verdana" size = 4>
+
+<p>This blog is about some key principles and insights that any tester or testing team should have in mind as they make their first forays into testing.</p>
+<p>The hardest part of A/B testing is determining what to test in the first place.One of the most common questions is, “Where do I begin?”</p>
+<p>A mistake that some companies make is to start moving a bunch of levers around without clear planning upfront for what they’re trying to optimize and what will be impacted by those changes. It’s tempting to just dive in and start changing parts of your homepage, or your product page, or your checkout page, without truly understanding the value that it’s generating (or not generating) for your business.</p>
+<p>Instead, In the book <a href="https://www.amazon.com/Testing-Most-Powerful-Clicks-Customers/dp/1118792416" target="_blank" rel="noopener">A/B TESTING The Most Powerful Way to Turn Clicks Into Customers</a>, the authors advise a purposeful and deliberate five-step process:</p>
+<ul>
+<li>Step One: <strong>Define success</strong></li>
+<li>Step Two: <strong>Identify bottlenecks</strong></li>
+<li>Step Three: <strong>Construct a hypothesis</strong> </li>
+<li>Step Four: <strong>Prioritize</strong></li>
+<li>Step Five: <strong>Test</strong></li>
+</ul>
+<h5 id="Step-One-Define-Success"><a href="#Step-One-Define-Success" class="headerlink" title="Step One: Define Success"></a>Step One: Define Success</h5><p>Before you can determine which of your test’s variations is the winner, you have to first decide how you’re keeping score. To start A/B testing successfully, you need to answer a specific question: What is your website for? If you could make your website do one thing better, what would it do?</p>
+<p>Defining success in the context of A/B testing involves taking the answer to the question of your site’s ultimate purpose and turning it into something more precise: quantifiable success metrics. Your success metrics are the specific numbers you hope will be improved by your tests.</p>
+<p>It’s fairly easy for an e-commerce business to define its success metrics in terms of revenue per visitor and for a fundraising website to define its success metrics in terms of average donation per visitor. Depending on your business model, defining your success metrics may be trickier.</p>
+<h5 id="Step-Two-Identify-Bottlenecks"><a href="#Step-Two-Identify-Bottlenecks" class="headerlink" title="Step Two: Identify Bottlenecks"></a>Step Two: Identify Bottlenecks</h5><p>Once you’ve determined what your site’s quantifiable success metrics are, you can turn your attention to your site analytics and discover where your biggest bottlenecks are: the places where your users are dropping off, or the places where you’re losing the most momentum in moving users through your desired series of actions.</p>
+<h5 id="Step-Three-Construct-a-Hypothesis"><a href="#Step-Three-Construct-a-Hypothesis" class="headerlink" title="Step Three: Construct a Hypothesis"></a>Step Three: Construct a Hypothesis</h5><p>Once you’ve identified what the bottlenecks are in your process, use your understanding of visitor intent to come up with test hypotheses. Consider different forms of qualitative research such as user interviews, feedback forms, or focus groups to gain an understanding of what’s going on in users’ heads as they interact with your site.</p>
+<p>Hypotheses make tests more informative because they provide a specific purpose by helping you hone in on what you are actually trying to determine. If you run an experiment without forming a hypothesis beforehand, you might gather information that’s helpful anecdotally while missing the deeper lesson. Experimentation inherently generates more questions than it answers, and when used effectively will always validate or invalidate some hypothesis, thus lending focus to the next round of questions.</p>
+<p>“Failed” tests are valuable because they often lead to new hypotheses for why they didn’t turn out the way you expected. Generating these hypotheses is sometimes tricky, because visitors behave in complex ways. Regardless of the complexity, however, employing the scientific method in testing will bring you closer to a meaningful understanding of your website’s audience.</p>
+<h5 id="Step-Four-Prioritize"><a href="#Step-Four-Prioritize" class="headerlink" title="Step Four: Prioritize"></a>Step Four: Prioritize</h5><p>Once you’ve generated hypotheses about user behavior that lead to candidate page variations for testing, you’ll need to use your intuition about what’s going to have the biggest impact to rankorder your experiments.</p>
+<p>In a perfect world, you might test absolutely everything, but no team in the real world operates without constraints; your team’s attention, budget, time, and also your site’s traffic are all finite. These realities make prioritization of testing hypotheses a necessity.</p>
+<h5 id="Step-Five-Test"><a href="#Step-Five-Test" class="headerlink" title="Step Five: Test"></a>Step Five: Test</h5><p>All that’s left is to run the test. You’ll show randomly selected visitors the variation(s) and track how they behave relative to users seeing the current site with respect to the quantifiable success metrics you’ve determined.</p>
+<p>Once the test reaches statistical significance, you’ll have your answer.</p>
+<p>Often a completed test yields not only answers, but—as in any other science—more questions. And this cycle of iteration, of exploration and refinement.</p>
+<h5 id="Summary"><a href="#Summary" class="headerlink" title="Summary:"></a>Summary:</h5><ul>
+<li>You can’t pick a winner until you decide how you’re keeping score. A/B testing starts with determining <strong>quantifiable success metrics</strong>.</li>
+<li>There are a number of possible <strong>conversion goals:</strong> time on site, pageviews, average order value, revenue per visitor, and so on. Take the time to pick the one that’s right for you.</li>
+<li>Site analytics along with your own instincts will suggest <strong>bottlenecks</strong> where you can focus your attention.</li>
+<li>Understanding visitor intent with the help of interviews and usability tests will suggest <strong>hypotheses</strong> about what to change and how.</li>
+<li><strong>Prioritize</strong> your experiments based on your prediction of their impact.</li>
+<li><strong>Start testing</strong>, and continue until you begin to see diminishing returns.</li>
+</ul>
+</font>
+        </div>
+        <footer class="article-footer">
             
 
 
-This article is about Machine Learning notes, coming soon!
 
-        </p>
+    <a data-url="http://haiming2048.github.io/en/AB-Testing/" data-id="ckd632sot00007gceg9ng0q84" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Haiming"
+        },
+        "headline": "A/B Testing",
+        "image": "http://haiming2048.github.io/image/stat/ab.jpg",
+        "keywords": "Statistics AB testing",
+        "genre": "Statistics AB testing",
+        "datePublished": "2020-07-28",
+        "dateCreated": "2020-07-28",
+        "dateModified": "2020-07-28",
+        "url": "http://haiming2048.github.io/en/AB-Testing/",
+        "description": "
+
+
+
+
+This blog is about some key principles and insights that any tester or testing team should have in mind as they make their first forays into testing.
+The hardest part of A/B testing is determinin",
+        "wordCount": 836
+    }
+</script>
+
 </article>
+
+    <section id="comments">
     
-        </div>
-    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
 
 
-    </div></section>
+    
+    </section>
 
 
 
@@ -275,6 +406,19 @@ This article is about Machine Learning notes, coming soon!
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/en/Python_Crash_Course/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Python Crash Course</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -486,11 +630,13 @@ This article is about Machine Learning notes, coming soon!
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://haiming2048.github.io/en/AB-Testing/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

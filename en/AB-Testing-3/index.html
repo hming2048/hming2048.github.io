@@ -6,26 +6,27 @@
     
 
     
-    <title>Machine Learning | Haiming</title>
+    <title>A/B Testing Part III | Haiming</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="ML" />
+    <meta name="keywords" content="Statistics,AB testing" />
     
-    <meta name="description" content="This article is about Machine Learning notes, coming soon!">
+    <meta name="description" content="This is the last part of AB Testing, if you haven’t read the first or second parts (A&#x2F;B Testing Part I,A&#x2F;B Testing Part II), it bettle to read them first, then come back latter.  In this blog, we">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Machine Learning">
-<meta property="og:url" content="http://haiming2048.github.io/en/python_ML/index.html">
+<meta property="og:title" content="A&#x2F;B Testing Part III">
+<meta property="og:url" content="http://haiming2048.github.io/en/AB-Testing-3/index.html">
 <meta property="og:site_name" content="Haiming">
-<meta property="og:description" content="This article is about Machine Learning notes, coming soon!">
+<meta property="og:description" content="This is the last part of AB Testing, if you haven’t read the first or second parts (A&#x2F;B Testing Part I,A&#x2F;B Testing Part II), it bettle to read them first, then come back latter.  In this blog, we">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://haiming2048.github.io/image/test.jpg">
-<meta property="article:published_time" content="2020-04-10T19:56:22.000Z">
-<meta property="article:modified_time" content="2020-06-21T00:46:18.693Z">
+<meta property="og:image" content="http://haiming2048.github.io/image/stat/ab.jpg">
+<meta property="article:published_time" content="2020-07-31T00:38:19.000Z">
+<meta property="article:modified_time" content="2020-07-31T01:14:24.413Z">
 <meta property="article:author" content="Haiming">
-<meta property="article:tag" content="ML">
+<meta property="article:tag" content="Statistics">
+<meta property="article:tag" content="AB testing">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://haiming2048.github.io/image/test.jpg">
+<meta name="twitter:image" content="http://haiming2048.github.io/image/stat/ab.jpg">
     
 
     
@@ -149,19 +150,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/ML/">ML</a>
+    <a class="page-title-link" href="/categories/Statistics/">Statistics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Statistics/AB-testing/">AB testing</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-python_ML" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-AB-Testing-3" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Machine Learning
+        A/B Testing Part III
         </h1>
     
 
@@ -172,8 +173,8 @@
                 
     <div class="article-date">
       <i class="fa fa-calendar"></i>
-      <a href="/en/python_ML/" class="article-date">
-         <time datetime="2020-04-10T19:56:22.000Z" itemprop="datePublished">2020-04-10</time>
+      <a href="/en/AB-Testing-3/" class="article-date">
+         <time datetime="2020-07-31T00:38:19.000Z" itemprop="datePublished">2020-07-30</time>
       </a>
     </div>
 
@@ -183,7 +184,7 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/ML/" rel="tag">ML</a>
+        <a class="tag-link" href="/tags/AB-testing/" rel="tag">AB testing</a>, <a class="tag-link" href="/tags/Statistics/" rel="tag">Statistics</a>
     </div>
 
                 
@@ -200,10 +201,113 @@
 
             
 
-            <br>
-<img src="/image/test.jpg" alt="ML" class="caption" height='800' width ='640' />
+            <hr>
+<br>
+<img src="/image/stat/ab.jpg" alt="A/B Testing Words Cloud" class="caption" />
+<font face="Verdana" size = 4>
 
-<p>This article is about Machine Learning notes, coming soon!</p>
+<p>This is the last part of AB Testing, if you haven’t read the first or second parts (<a href="https://hming2048.com/en/AB-Testing/" target="_blank" rel="noopener">A/B Testing Part I</a>,<a href="https://hming2048.com/en/AB-Testing-2/" target="_blank" rel="noopener">A/B Testing Part II</a>), it bettle to read them first, then come back latter. </p>
+<p>In this blog, we will summarize the 60 things to A/B test from the book <a href="https://www.amazon.com/Testing-Most-Powerful-Clicks-Customers/dp/1118792416" target="_blank" rel="noopener">A/B TESTING The Most Powerful Way to Turn Clicks Into Customers</a></p>
+<h5 id="Calls-to-Action"><a href="#Calls-to-Action" class="headerlink" title="Calls to Action"></a>Calls to Action</h5><p>Your website exists for visitors to take action: reading, purchasing, signing up, downloading, or sharing. Here are some ways to test calls to action that can yield quick, easy, and big wins.</p>
+<ul>
+<li><em>1</em>. Buy now? Purchase? Check out? Add to cart? Change the call to action (CTA) text on your buttons to see which word or phrase converts more visitors.</li>
+<li><em>2</em>. Try varying the location of your CTA button, making some CTAs more prominent than others.</li>
+<li><em>3</em>. Test multiple CTAs per page against one CTA per page.</li>
+<li><em>4</em>. Change buttons to hyperlinks to find out which display your users prefer.</li>
+<li><em>5</em>. Find out if CTAs with text, icons, or text plus icons convert more users on your site.</li>
+<li><em>6</em>. Test different colors, shapes, and sizes for CTA buttons on your website.</li>
+</ul>
+<h5 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h5><p>Content fuels your online business, particularly if you’re a B2B company. Testing how you position and advertise content on your site can uncover big conversion and engagement lifts.</p>
+<ul>
+<li><em>7</em>. Testgatedcontentagainstnongatedcontent.Findoutifyour users are willing to sign up or provide more information to access materials on your site.</li>
+<li><em>8</em>. Do site visitors crave more information about your company before signing up or making a purchase? Test adding or removing “About” content on your home page.</li>
+<li><em>9</em>. Content tone can make a big difference in keeping users on your site. See what your visitors prefer by testing various tones and styles.</li>
+<li><em>10</em>. Test how your content is displayed. Do users prefer to scroll down the page or click through to another page to learn more?</li>
+</ul>
+<h5 id="Copy"><a href="#Copy" class="headerlink" title="Copy"></a>Copy</h5><p>Copy is your direct line of communication with website visitorsit sets the tone and helps users understand what you’re all about. Use these tests to make the copy on your site better resonate with your audience.</p>
+<ul>
+<li><em>11</em>. Test different headline texts. Try variations that are straightforward against ones that are abstract, goofy, or creative.</li>
+<li><em>12</em>. Find out if your site visitors prefer shorter versions of headlines, taglines, product descriptions, and other content on your site.</li>
+<li><em>13</em>. Run a multivariate test. Test different combinations of headlines and taglines in combination with the visual imagery on your page to find the ultimate winning variation.</li>
+<li><em>14</em>. Test paragraphs versus bulleted lists.</li>
+<li><em>15</em>. Test how you frame your copy. Users may have different reactions to positive versus negative messaging.</li>
+<li><em>16</em>. Try making your site easier to read with larger fonts, highercontrast colors, and professional fonts (not Comic Sans). Studies show this increases trustworthiness and increases conversions.</li>
+</ul>
+<h5 id="Visual-Media"><a href="#Visual-Media" class="headerlink" title="Visual Media"></a>Visual Media</h5><p>Digital media have the power to greatly influence conversions and engagement on a website, and testing digital media is a great idea because the right media can subconsciously influence people to act in a way that’s aligned with your testing goals.</p>
+<ul>
+<li><em>17</em>. Test different types of images on your landing page. People versus products is a good place to start.</li>
+<li><em>18</em>. And iterate from there! Try a static image versus a product video versus a 360 product image.</li>
+<li><em>19</em>. See how a stock image stacks up against an image of your employees or customers in action.</li>
+<li><em>20</em>. Test a rotating carousel on your home page versus a static image or video.</li>
+<li><em>21</em>. Test different voice-overs for the videos on your site. Test whether a male or a female voice leads to the most completed views.</li>
+<li><em>22</em>. Trydifferentvariationsofyoursite’sproductdemo:animated versus screencast.</li>
+<li><em>23</em>. Test auto-play against click-to-play video.</li>
+</ul>
+<h5 id="Funnels"><a href="#Funnels" class="headerlink" title="Funnels"></a>Funnels</h5><p>If your goal is to get more people from one page to the next – like in a checkout funnel, signup flow, or lead nurture – then A/B testing is your best bet. Funnels are rife with low-hanging fruit to test.</p>
+<ul>
+<li><em>24</em>. Test removing extraneous distractions—like product offers, promotions, or shipping information—from each page in the purchase flow. Oftentimes a simplified experience can drive more conversions.</li>
+<li><em>25</em>. Test the number of pages in your funnel. How does packing more information on one page compare to spreading infor- mation across multiple pages?</li>
+<li><em>26</em>. Test removing navigation to any pages outside the checkout funnel.</li>
+<li><em>27</em>. Or try replacing certain steps within your funnel with modal boxes. For example, try making shipping options a modal box instead of a page.</li>
+</ul>
+<h5 id="Site-Navigation"><a href="#Site-Navigation" class="headerlink" title="Site Navigation"></a>Site Navigation</h5><p>From the moment a visitor lands on your site, the navigation menu sets a foundation—it’s how people maneuver your site’s flow and prioritize what’s important. Here are some ideas for how to make it better:</p>
+<ul>
+<li><em>28</em>. Test the order of menu items in your site navigation.</li>
+<li><em>29</em>. Test the display of your navigation bar. Do site visitors prefer a horizontal or vertical orientation?</li>
+<li><em>30</em>. Or what about a fixed navigation bar that travels down the page as your site visitors scroll?</li>
+<li><em>31</em>. Test out the title of your navigation items. A simple change, like “Why Use Us” to “How It Works,” may have a significant impact.</li>
+<li><em>32</em>. Testing Tip: If a test fails, try targeting the test to new versus returning visitors. Returning visitors are accustomed to seeing the site in a certain way—if a link or menu item is missing from the spot they normally go to in order to find it, they’re not going to do the work to locate it.</li>
+</ul>
+<h5 id="Forms"><a href="#Forms" class="headerlink" title="Forms"></a>Forms</h5><p>Any potential friction point on a website is prime for testing. Forms are frequently cumbersome areas of websites. Try these tests on the forms on your site:</p>
+<ul>
+<li><em>33</em>. Test the length of signup forms. Try removing nonessential signup boxes or relocating them to a page further down the funnel.</li>
+<li><em>34</em>. Try a special offer, discount, or promotion to increase signups. People love free stuff.</li>
+<li><em>35</em>. Spam is the worst. Try adding text that assures users you won’t fill up their inboxes with unnecessary junk.</li>
+<li><em>36</em>. Try making individual form fields larger. Larger fields feel more friendly.</li>
+<li><em>37</em>. Try asking for different information in your form fields—for example, business email versus regular email, or work phone versus mobile phone.</li>
+</ul>
+<h5 id="Mobile-Site"><a href="#Mobile-Site" class="headerlink" title="Mobile Site"></a>Mobile Site</h5><p>The mobile web is pervasive. Improving your mobile website through testing will help create an optimized experience that generates more click-throughs, revenue, and conversions.</p>
+<ul>
+<li><em>38</em>. Test the length of your mobile web pages. Are mobile users more willing to click to a new page or scroll down a page when browsing your site on their devices?</li>
+<li><em>39</em>. Try different displays and navigation options. Blinds, buttons, and blocks are good places to start.</li>
+</ul>
+<p><em>Testing Tip</em>: When testing your mobile website, try targeting mobile users based on their operating system—Android or iOS, for example—to learn more about your mobile website visitors.</p>
+<h5 id="Advertising"><a href="#Advertising" class="headerlink" title="Advertising"></a>Advertising</h5><p>A/B testing increases the value of the money you’re already spending on marketing programs, such as search engine marketing. To ensure you’re getting the biggest bang for your buck out of each paid initiative, try these tests:</p>
+<ul>
+<li><em>40</em>. Test the headlines on your paid campaigns to see which ones get the most clicks.</li>
+<li><em>41</em>. Try changing up the display URL on your ads. This can impact how many visitors click the ad.</li>
+<li><em>42</em>. The landing page each ad directs to is an excellent place for testing. You paid for that visitor to land there, so you want to do everything you can to convert that visitor.</li>
+</ul>
+<h5 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h5><p>The reasons someone would share your site are many—make it easy for them to do so. Here are a few tests to increase likes, retweets, and þ1s on your content:</p>
+<ul>
+<li><em>43</em>. Change the size and placement of social icons to see what compels users to share more often.</li>
+<li><em>44</em>. Teststandardsocialmediaiconsagainstonesyou’vedesigned to match the look and feel of your site.</li>
+<li><em>45</em>. Try finding your optimal Twitter voice. Tweet the same link with different types of text at the same time two days in a row and see which tone of voice gets more engagement.</li>
+<li><em>46</em>. Test different types of customer reviews on your site to see which are most compelling to your audience. Some examples include testimonials, Yelp reviews, and ResellerRatings.</li>
+</ul>
+<h5 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h5><p>How do you make sure your marketing emails get opened and, dare we say, clicked? Here are some testable elements that can increase open rates and click-throughs:</p>
+<ul>
+<li><em>47</em>. Test length and copy of your email subject lines.</li>
+<li><em>48</em>. Test personalized versus unpersonalized emails by using the<br>recipient’s name in the subject or email text.</li>
+<li><em>49</em>. Find the optimal time to reach your audience by measuring open rates on different days of the week and at different times of the day.</li>
+<li><em>50</em>. If you distribute a newsletter or email update, see how a weekly send stacks up against a monthly blast.</li>
+<li><em>51</em>. WouldreaderspreferanemailfromyourCEO,yourmarket- ing director, your broader team, or someone else? Test different “from” addresses to find out.</li>
+</ul>
+<h5 id="Personalize-It"><a href="#Personalize-It" class="headerlink" title="Personalize It"></a>Personalize It</h5><p>Today, we’re more accustomed to web experiences that are custom-tailored to who we are and the URLs we’ve come from. Try testing these personalization techniques and see if visitors convert better.</p>
+<ul>
+<li><em>52</em>. Create seasonal or holiday-specific promotional offers and<br>test them on visitors living in specific locations.</li>
+<li><em>53</em>. Test auto-filling form fields related to a site visitor’s location.<br>Make things easier for your users.</li>
+<li><em>54</em>. Test matching language-specific content to users coming from a certain country or region.</li>
+<li><em>55</em>. Test different page designs and messaging for new versus returning visitors.</li>
+<li><em>56</em>. Test whether showing different landing pages for visitors coming from mobile devices versus desktop browsers performs better than having the same landing page for both.</li>
+</ul>
+<h5 id="Pricing-and-Shipping"><a href="#Pricing-and-Shipping" class="headerlink" title="Pricing and Shipping"></a>Pricing and Shipping</h5><p>Finding the right pricing point can drive more visitors to make a purchase. Use these tests to maximize revenue from your site:</p>
+<ul>
+<li><em>57</em>. Test offering a free trial versus a money-back guarantee to see which converts more users in the short term and in the long term.</li>
+<li><em>58</em>. Test having checkboxes auto-selected as default (such as billing information being the same as shipping info).</li>
+<li><em>59</em>. On your pricing page, test whether annual billing or monthly billing generates more subscriptions.</li>
+<li><em>60</em>. Try anchoring customers high before showing them a lower price. For example, “Competitors charge $2.9 trillion, but you can use us for just $2.99!”</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -211,7 +315,7 @@
 
 
 
-    <a data-url="http://haiming2048.github.io/en/python_ML/" data-id="ckd4w22680009iece95n61sus" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://haiming2048.github.io/en/AB-Testing-3/" data-id="ckd9jcfj10000lece3otm4pxk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -281,20 +385,22 @@
             "@type": "Person",
             "name": "Haiming"
         },
-        "headline": "Machine Learning",
-        "image": "http://haiming2048.github.io/image/test.jpg",
-        "keywords": "ML",
-        "genre": "ML",
-        "datePublished": "2020-04-10",
-        "dateCreated": "2020-04-10",
-        "dateModified": "2020-06-20",
-        "url": "http://haiming2048.github.io/en/python_ML/",
+        "headline": "A/B Testing Part III",
+        "image": "http://haiming2048.github.io/image/stat/ab.jpg",
+        "keywords": "Statistics AB testing",
+        "genre": "Statistics AB testing",
+        "datePublished": "2020-07-30",
+        "dateCreated": "2020-07-30",
+        "dateModified": "2020-07-30",
+        "url": "http://haiming2048.github.io/en/AB-Testing-3/",
         "description": "
 
 
-This article is about Machine Learning notes, coming soon!
-",
-        "wordCount": 16
+
+
+This is the last part of AB Testing, if you haven’t read the first or second parts (A/B Testing Part I,A/B Testing Part II), it bettle to read them first, then come back latter. 
+In this blog, we",
+        "wordCount": 1691
     }
 </script>
 
@@ -375,20 +481,10 @@ This article is about Machine Learning notes, coming soon!
         
 <nav id="article-nav">
     
-        <a href="/en/data_science/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Data Science
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/en/python_pandas/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/en/AB-Testing-2/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Python Pandas</p>
+        <p class="article-nav-title">A/B Testing Part II</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -605,7 +701,7 @@ This article is about Machine Learning notes, coming soon!
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://haiming2048.github.io/en/python_ML/';
+    var disqus_url = 'http://haiming2048.github.io/en/AB-Testing-3/';
     
     (function() {
     var dsq = document.createElement('script');
